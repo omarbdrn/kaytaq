@@ -1,5 +1,6 @@
-# kaytaq
+# KayTaq
 RSS Feed Monitoring to feed blog posts into KayTaq for blog creations.
+(KayTaq is a blog made for testing purposes and some interesting blogs)
 
 # Sample Output
 Running it on [CyberDanube Security Research 20230511-0 | Multiple Vulnerabilities in Advantech EKI-15XX Series](https://seclists.org/fulldisclosure/2023/May/4)
