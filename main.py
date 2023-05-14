@@ -57,7 +57,6 @@ class KayTaq:
                 blog_summary = soup.get_text()
                 self.parseFeed(blog_link, feed_parser)
                 self.entries += 1
-                exit()
     
     def parseFeed(self, url, feed_parser):
         # Open Channel to Model
