@@ -66,14 +66,13 @@ class KayTaq:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
         if feed_parser == "Reddit":    
-            # div = soup.find("div", {"data-post-click-location": "post-media-cta"})
-            # if div != None:
-            #     items = ''.join([line for line in div.get_text().split("\n") if line.strip != ''])
-            #     if len(items) > 48:
-            #         # If Greater than 48 Characters split context into multiple chunks
-            #         for chunk in self.split_text(items, self.snippet_size):
-            #             print(chunk)
-            return 0
+            div = soup.find("div", {"data-post-click-location": "post-media-cta"})
+            if div != None:
+                items = ''.join([line for line in div.get_text().split("\n") if line.strip != ''])
+                if len(items) > 48:
+                    # If Greater than 48 Characters split context into multiple chunks
+                    for chunk in self.split_text(items, self.snippet_size):
+                        print(chunk)
         elif feed_parser == "SecLists":
             data = soup.get_text()
             items = ' '.join([line for line in data.split("\n") if line.strip != ''])
